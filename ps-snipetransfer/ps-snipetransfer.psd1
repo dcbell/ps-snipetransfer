@@ -18,9 +18,6 @@
     # Module dependencies
     RequiredModules = @()
 
-    # Path to module files
-    ModuleBase = 'C:\Program Files\WindowsPowerShell\Modules\ps-snipetransfer'
-
     # The file to load for module initialization (optional)
     # ScriptFile = 'init.ps1'
 }
