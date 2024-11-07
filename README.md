@@ -25,8 +25,8 @@ Powershell cmdlets to transfer assets from one user to another.
 * Initialize-SnipeConnection - Set connection variables for other modules.
 * New-SnipeTransferAll - Transfer all assets and accessories from one user to another.
 * New-SnipeTransfer - Transfer an asset or accessory from one user, location, or asset to another.
-* New-SnipeCheckout - Check out an asset or accessory.
-* New-SnipeCheckin - Check in an asset or accessory.
+* New-SnipeCheckout - Check out an asset or accessory. Intended to be used by the Transfer functions, but you can also use it directly.
+* New-SnipeCheckin - Check in an asset or accessory. Intended to be used by the Transfer functions, but you can also use it directly.
 
 ## Help
 
