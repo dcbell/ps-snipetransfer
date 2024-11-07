@@ -25,11 +25,11 @@ NOTES:
     Get-Help is available on all cmdlets to provide more information and specific syntax.
 
 CMDLETS:
-- Initialize-SnipeConnection
-- New-SnipeTransferAll
-- New-SnipeTransfer
-- New-SnipeCheckout
-- New-SnipeCheckin
+    - Initialize-SnipeConnection
+    - New-SnipeTransferAll
+    - New-SnipeTransfer
+    - New-SnipeCheckout
+    - New-SnipeCheckin
 
 SOURCE:
     https://github.com/dcbell/ps-snipetransfer
