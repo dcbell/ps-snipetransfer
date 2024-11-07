@@ -15,11 +15,10 @@ Powershell cmdlets to transfer assets from one user to another.
 
 ## Quickstart
 
-1. Download the ps-snipetransfer folder into your module path. For instance, C:\Program Files\WindowsPowerShell\Modules\ps-snipetransfer.
-2. In powershell, run `Import-Module PS-SnipeTransfer`
-3. Run the initialization cmdlet to collect your connection info: `Initialize-SnipeConnection`
-4. Provide your URL and API Personal Access Token (<https://snipe-it.readme.io/reference/generating-api-tokens>)
-5. Run the cmdlets as needed. See examples below.
+1. Install the module from Powershell Gallery `Install-Module -name PS-SnipeTransfer`
+2. Run the initialization cmdlet to collect your connection info: `Initialize-SnipeConnection`
+3. Provide your URL and API Personal Access Token (<https://snipe-it.readme.io/reference/generating-api-tokens>)
+4. Run the cmdlets as needed. See examples below.
 
 ## Available Cmdlets
 
