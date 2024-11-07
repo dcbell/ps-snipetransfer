@@ -10,7 +10,7 @@ function Initialize-SnipeConnection {
 		.PARAMETER SnipeURL
 		[string] Required. URL of your Snipe-IT instance with no trailing slash. i.e. "https://org.snipe-it.io"
 
-		.PARAMETER ApiKey
+		.PARAMETER SnipeApiKey
 		[string] Required. API Personal Access Token for your Snipe-IT instance. For help go here https://snipe-it.readme.io/reference/generating-api-tokens
 	#>
 
@@ -19,18 +19,18 @@ function Initialize-SnipeConnection {
 		[string]$SnipeURL,
 
 		[Parameter(Mandatory=$True)]
-		[string]$ApiKey
+		[string]$SnipeApiKey
 	)
 
 	$script:SnipeURL = $SnipeURL
-	$script:ApiKey = $ApiKey
+	$script:SnipeApiKey = $SnipeApiKey
 	$script:ConnectionTested = $false
 	
 	# Validate connection
 	$response = $null
 	$headers=@{}
 	$headers.Add("accept", "application/json")
-	$headers.Add("Authorization", "Bearer $script:ApiKey")
+	$headers.Add("Authorization", "Bearer $script:SnipeApiKey")
 	$ApiUrl = "$script:SnipeURL/api/v1/user?limit=5" 
 	$response = Invoke-WebRequest -Uri $ApiUrl -Method GET -Headers $headers
 
@@ -69,7 +69,7 @@ function New-SnipeCheckin {
 	# Set API headers
 	$headers=@{}
 	$headers.Add("accept", "application/json")
-	$headers.Add("Authorization", "Bearer $script:ApiKey")
+	$headers.Add("Authorization", "Bearer $script:SnipeApiKey")
 
 	switch ($CheckinType) {
 		"asset" { 
@@ -132,7 +132,7 @@ function New-SnipeCheckout {
 	# Set API headers
 	$headers=@{}
 	$headers.Add("accept", "application/json")
-	$headers.Add("Authorization", "Bearer $script:ApiKey")
+	$headers.Add("Authorization", "Bearer $script:SnipeApiKey")
 	$headers.Add("content-type", "application/json")
 
 	switch ($CheckoutType) {
@@ -245,7 +245,7 @@ function New-SnipeTransferAll {
 	# Set API headers
 	$headers=@{}
 	$headers.Add("accept", "application/json")
-	$headers.Add("Authorization", "Bearer $script:ApiKey")
+	$headers.Add("Authorization", "Bearer $script:SnipeApiKey")
 
 	$AssetsToTransfer=@()
 	$AccessoryIDs=@()
