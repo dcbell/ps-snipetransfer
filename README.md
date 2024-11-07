@@ -1,6 +1,6 @@
 # ps-snipetransfer
 
-Powershell function to transfer assets from one user to another.
+Powershell cmdlets to transfer assets from one user to another.
 
 > [!IMPORTANT]
 > References to IDs (asset IDs, User IDs, etc.) are references to the database IDs. You can find these in the URL when looking at a user, asset, etc. This is **NOT** the asset tag or the username.
@@ -10,18 +10,33 @@ Powershell function to transfer assets from one user to another.
 
 ## Future Updates
 
-* Build the necessary files to make the functions here into cmdlets.
+* Add additional help to modules with more examples.
 * Add additional functions as needed (display list of assets for a user, etc.)
 
 ## Quickstart
 
-You can either paste the entire code into a PowerShell terminal and then execute functions as needed, or build out a main script below the functions.
+1. Create a folder ps-snipetransfer in your module path. For instance, C:\Program Files\WindowsPowerShell\Modules\ps-snipetransfer.
+2. Store the ps-snipetransfer.psm1 inside that folder.
+3. In powershell, run `Import-Module PS-SnipeTransfer`
+4. Run the initialization cmdlet to collect your connection info: `Initialize-SnipeConnection`
+5. Provide your URL and API Personal Access Token (<https://snipe-it.readme.io/reference/generating-api-tokens>)
+6. Run the cmdlets as needed. See examples below.
+
+## Available Cmdlets
+
+* Initialize-SnipeConnection - Set connection variables for other modules.
+* New-SnipeTransferAll - Transfer all assets and accessories from one user to another.
+* New-SnipeTransfer - Transfer an asset or accessory from one user, location, or asset to another.
+* New-SnipeCheckout - Check out an asset or accessory.
+* New-SnipeCheckin - Check in an asset or accessory.
+
+## Help
+
+You can run get-help on any of the cmdlets to get more information.
 
 ## Examples
 
 ### Transfer everything
-
-To transfer everything from one user or another:
 
 ```powershell
 New-SnipeTransferAll -FromID <OldUserID> -ToID <NewUserID>
