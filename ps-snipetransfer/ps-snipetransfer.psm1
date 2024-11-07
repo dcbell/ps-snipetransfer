@@ -1,36 +1,3 @@
-<#
-	.SYNOPSIS
-	Powershell cmdlets to transfer assets from one user, location, or asset to another.
-
-	.DESCRIPTION
-	Powershell cmdlets to transfer assets from one user, location, or asset to another.
-
-	.EXAMPLE
-	Initialize-SnipConnection
-	Required step to get connected to the Snipe-IT API.
-
-	New-SnipeTransferAll -FromID <OldUserID> -ToID <NewUserID>
-	Transfers all assets and accessories from one user to another.
-
-	New-SnipeTransfer -TransferID <Asset ID> -ToID <User ID>
-	Transfers a single asset from anywhere to the specified user.
-
-	New-SnipeTransfer -TransferType 'accessory' -TransferID <accessory+user Pivot ID> -AccessoryID <Accessory ID> -ToID <User ID>
-	Transfers one accessory from a user to another user
-
-	.NOTES
-	References to IDs (asset IDs, User IDs, etc.) are references to the database IDs. You can find these in the URL when looking at a user, asset, etc. This is **NOT** the asset tag or the username.
-
-	Get-Help is available on all cmdlets to provide more information.
-
-	List of cmdlets:
-	Initialize-SnipeConnection
-	New-SnipeTransferAll
-	New-SnipeTransfer
-	New-SnipeCheckout
-	New-SnipeCheckin
-#>
-
 function Initialize-SnipeConnection {
 	[CmdletBinding()]
 	<#
