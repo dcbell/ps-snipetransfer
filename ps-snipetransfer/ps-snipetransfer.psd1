@@ -1,7 +1,7 @@
 # PS-SnipeTransfer.psd1
 @{
     # Module metadata
-    ModuleVersion = '1.0.0'
+    ModuleVersion = '1.0.1'
     GUID = '8e1b265f-fefa-4b65-9eda-1fb393ce5dad'
     Author = 'something_amusing'
     Description = 'Cmdlets to transfer assets and accessories in Snipe-IT between users, locations, and assets.'
