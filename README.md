@@ -1,6 +1,6 @@
 # ps-snipetransfer
 
-Powershell cmdlets to transfer assets from one user to another.
+Powershell cmdlets to transfer assets from one user, location, or asset to another.
 
 > [!IMPORTANT]
 > References to IDs (asset IDs, User IDs, etc.) are references to the database IDs. You can find these in the URL when looking at a user, asset, etc. This is **NOT** the asset tag or the username.
