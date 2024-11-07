@@ -18,9 +18,6 @@
     # Module dependencies
     RequiredModules = @()
 
-    # Help info
-    HelpInfoURI = 'https://github.com/dcbell/ps-snipetransfer'
-
     # The file to load for module initialization (optional)
     # ScriptFile = 'init.ps1'
 }
